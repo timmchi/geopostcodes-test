@@ -4,17 +4,27 @@ const services = [
   {
     id: 1,
     title: "Data Explorer",
-    url: "/data-explorer",
+    url: "data-explorer",
     image: "/images/data_explorer.svg",
   },
-  { id: 1, title: "Map Explorer", url: "", image: "/images/map_explorer.webp" },
+  {
+    id: 1,
+    title: "Map Explorer",
+    url: "map-explorer",
+    image: "/images/map_explorer.webp",
+  },
   {
     id: 1,
     title: "Download Center",
-    url: "",
+    url: "download-center",
     image: "/images/download_center.svg",
   },
-  { id: 1, title: "Knowledge Base", url: "", image: "/images/kb.svg" },
+  {
+    id: 1,
+    title: "Knowledge Base",
+    url: "knowledge-base",
+    image: "/images/kb.svg",
+  },
 ];
 
 export default function LandingPage() {

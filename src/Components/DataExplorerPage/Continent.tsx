@@ -1,5 +1,5 @@
-import React from "react";
-import { Country } from "../../types";
+import type { Country } from "../../types";
+import CountryElement from "./Country";
 
 export default function Continent({
   continent,
@@ -11,11 +11,11 @@ export default function Continent({
   return (
     <div className="">
       <p className="text-2xl font-extralight border-b pb-2">{continent}</p>
-      <ul className="grid grid-cols-3 py-8">
+      <div className="grid grid-cols-3 py-8">
         {countries.map((country) => (
-          <li key={country.iso}>{country.name}</li>
+          <CountryElement country={country} key={country.iso} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

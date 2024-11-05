@@ -1,12 +1,16 @@
-import { useState } from "react";
 import NavBar from "./Components/Navigation/NavBar";
+import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Components/LandingPage/LandingPage";
+import DataExplorerPage from "./Components/DataExplorerPage/DataExplorerPage";
 
 function App() {
   return (
     <>
       <NavBar />
-      <LandingPage />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/data-explorer" element={<DataExplorerPage />} />
+      </Routes>
     </>
   );
 }

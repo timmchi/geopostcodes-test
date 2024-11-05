@@ -11,7 +11,7 @@ export default function Continent({
   return (
     <div className="">
       <p className="text-2xl font-extralight border-b pb-2">{continent}</p>
-      <div className="grid grid-cols-3 py-8">
+      <div className="grid grid-cols-3 py-8 gap-4">
         {countries.map((country) => (
           <CountryElement country={country} key={country.iso} />
         ))}

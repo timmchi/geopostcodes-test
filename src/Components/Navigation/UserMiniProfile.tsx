@@ -1,10 +1,5 @@
 import { FaUser } from "react-icons/fa";
-
-interface User {
-  email: string;
-  company: string;
-  profilePicture?: string;
-}
+import type { User } from "../../types";
 
 export default function UserMiniProfile({ user }: { user: User }) {
   return (

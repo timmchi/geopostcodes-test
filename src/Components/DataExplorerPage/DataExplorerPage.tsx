@@ -3,17 +3,7 @@ import { TbWorldSearch } from "react-icons/tb";
 import Continent from "./Continent";
 import DatasetPanel from "./DatasetPanel";
 import SearchBar from "./SearchBar";
-
-interface Country {
-  continent: string;
-  iso: string;
-  name: string;
-  noPostalCode: boolean;
-  limited: boolean;
-  notAvailable: boolean;
-  url: string;
-  continentCode: number;
-}
+import type { Country } from "../../types";
 
 export default function DataExplorerPage() {
   const [countryData, setCountryData] = useState<Country[]>([]);
@@ -63,7 +53,11 @@ export default function DataExplorerPage() {
             <div>
               {/* I know this is a bit messy */}
               {[
-                ...new Set(countryData.map((country) => country.continent)),
+                ...new Set(
+                  countryData
+                    .sort((a, b) => a.continentCode - b.continentCode)
+                    .map((country) => country.continent)
+                ),
               ].map((continent) => (
                 <Continent
                   continent={continent}

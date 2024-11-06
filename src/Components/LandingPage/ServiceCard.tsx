@@ -1,11 +1,5 @@
 import { Link } from "react-router-dom";
-
-interface Service {
-  id: number;
-  title: string;
-  url: string;
-  image: string;
-}
+import type { Service } from "../../types";
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (

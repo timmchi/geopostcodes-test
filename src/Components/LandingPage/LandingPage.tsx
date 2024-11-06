@@ -41,7 +41,7 @@ export default function LandingPage() {
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bg-cover h-[35%] w-[65%] bottom-0 "
         style={{
-          backgroundImage: "url('../public/images/main_background.webp')",
+          backgroundImage: "url('/images/main_background.webp')",
         }}
       ></div>
     </div>
